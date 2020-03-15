@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;"> Preencha o formulario</h1>
+    <p id="welcome"></p>
+    <form name="formularioRegistro" id = "formularioRegistro" method="POST" action="http://localhost/index.html" onsubmit="return preencherPerfil(this);">
+    <p>Nome:<br><input type="text" name='Nome' id='Nome'> </p>
+    <p>Telefone:<br> <input type="text" name='Telefone' id='Telefone'> </p>
+    <p> Como nos conheceu: </p>
+    <select type="text" value="" name="Conhecimento">
+        <option  style="text-align: center;" value="tv">Tv</option>
+        <option value="internet">Internet</option>
+        <option value="outros">Outros</option>
+    </select><br>
+    <p>Possui redes sociais</p>
+    <input type="radio" name="RedesSociais" value="nao" onclick="mostraNao();" />
+    Nao
+    <input type="radio" name="RedesSociais" value="sim" onclick="mostraSim();" />
+    Sim
+    <div id="div1" class="hide" style="display:none">
+        <p> Marque a(s) que possui:</p>
+        <p><input type="checkbox" value="facebook" name="Checados1">
+        Facebook
+        </p>
+        <p><input type="checkbox" value="LinkedIn" name="Checados2">
+        LinkedIn
+        </p>
+        <p><input type="checkbox" value="instagram" name="Checados3">
+        Instagram
+        </p>
+    </div>
+    <p><input type="submit" value="Submit" name="meuButao">
+        <input type="button" value="Reset" name="Reset" onclick="resetForm(this.form);"></p>
+    </form>
+    <script src="index.js">
+    </script>
+    
+</body>
+</html>
